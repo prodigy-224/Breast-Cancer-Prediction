@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 
 # Load trained model
-model = joblib.load("models/Random_Forest.pkl")  
+model = joblib.load("models/Random_Forest.pkl")
 
 # Title
 st.title("Breast Cancer Prediction App")
@@ -11,10 +11,10 @@ st.title("Breast Cancer Prediction App")
 st.write("Please input the following tumor measurements:")
 
 # Input form
-radius_mean = st.number_input("Radius Mean", min_value=0.0, format="%.2f")
-concavity_mean = st.number_input("Concavity Mean", min_value=0.0, format="%.2f")
-smoothness_mean = st.number_input("Smoothness Mean", min_value=0.0, format="%.4f")
-texture_mean = st.number_input("Texture Mean", min_value=0.0, format="%.2f")
+radius_mean = st.number_input("Radius Mean",  format="%.2f")
+concavity_mean = st.number_input("Concavity Mean",  format="%.2f")
+smoothness_mean = st.number_input("Smoothness Mean",  format="%.4f")
+texture_mean = st.number_input("Texture Mean", format="%.2f")
 
 if st.button("Predict"):
     # Create DataFrame from inputs
